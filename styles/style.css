@@ -7,5 +7,151 @@
 }
 
 body {
+    height: 100vh;
+    font-family: var(--font-main);
     font-size: 18px;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-details {
+    width: 45%;
+    position: relative;
+}
+
+.card-details .card-front {
+    position: absolute;
+    top: 15%;
+    left: 38%;
+}
+
+.card-image {
+    width: 360px;
+    position: relative;
+}
+
+.data-front  {
+    position: absolute;
+    top: 0;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.data-front h2 {
+    margin: 30px 0 10px 0;
+    font-weight: 100;
+    
+}
+.data-front div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-front span {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.card-details .card-back {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+.card-back span {
+    font-size: 15px;
+    position: absolute;
+    top: 43%;
+    right: 15%;
+}
+
+.card-input {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-input form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    color: var(--very-dark-violet);
+}
+
+.card-input form label {
+    margin-bottom: 8px;
+}
+
+.card-input form input {
+    margin-bottom: 20px;
+}
+
+.card-input form input::placeholder {
+    color: var(--light-gravish-violet);
+    font-family: var(--font-main);
+}
+
+.card-input form label {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.card-input form input {
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid var(--light-gravish-violet);
+    padding: 9px;
+}
+
+.card-input form div {
+    width: 100%;
+    display: flex;
+   
+}
+.card-input form div .mm-yy,
+.card-input form div .cvc-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-input form div .mm-yy input {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.card-input form div .cvc-input input {
+    width: 100%;
+}
+
+.card-input form button {
+    font-family: var(--font-main);
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: var(--very-dark-violet);
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    transition: all 500ms ease;
+}
+
+.card-input form button:hover {
+    background-color: var(--light-gravish-violet);
+    border: 1px solid var(--very-dark-violet);
+    color: var(--very-dark-violet)
+}
+
+.attribution {
+    position: absolute;
+    font-size: 15px;
+    bottom: 0;
 }
