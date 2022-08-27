@@ -22,10 +22,12 @@
             <img src="images/bg-card-front.png" alt="card-front" class="card-image">
             <div class="data-front">
               <img src="images/card-logo.svg" alt="logo-card">
-              <h2>0000 0000 0000 0000</h2>
+              <h2 id="cardDate">0000 0000 0000 0000</h2>
                 <div>
-                  <span>Jane Appleseed</span>
-                  <span>00/00</span>
+                  <span class="name">Jane Appleseed</span>
+                  <div>
+                    <span class="spanM">00/</span><span class="spanY">00</span>
+                  </div>
                 </div>
             </div>
           </div>
@@ -34,42 +36,59 @@
         <div class="card-back">
           <div clas="card-image">
             <img src="images/bg-card-back.png" alt="card-back" class="card-image">
-            <span>000</span>
+            <span class="cvc">000</span>
           </div>
         </div>
       </div>
 
-      <div class="card-input">
-        <form>
+      <div class="cardInput">
+        <form id="formCard">
           <label for="name">cardholder name</label>
-          <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed">
-          <label for="card-number">card number</label>
-          <input type="number" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000">
+          <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed" maxlength="21" class="flag">
+          <span class="spanError"></span>
+          <label for="cardNumber">card number</label>
+          <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000" class="flag" maxlength="16">
+          <span class="spanError"></span>
           <div>
             <div class="mm-yy">
               <label for="date">exp. date (mm/yy)</label>
               <div>
-                <input type="text" name="date-mm" id="date" placeholder="MM">
-                <input type="text" name="date-yy" id="date.yy" placeholder="YY">
+                <div class="alignSpan">
+                  <input type="number" name="date-mm" id="dateMm" placeholder="MM">
+                  <span class="spanError"></span>
+                </div>
+                <div class="alignSpan">
+                  <input type="number" name="date-yy" id="dateYy" placeholder="YY">
+                  <span class="spanError"></span>
+                </div>
               </div>
             </div>
             <div class="cvc-input">
               <label for="cvc">cvc</label>
-              <div>
+              <div class="alignSpan">
                 <input type="number" id="cvc" name="cvc" placeholder="e.g. 123">
+                <span class="spanError"></span>
               </div>
             </div>
           </div>
-          <button type="submit">Confirm</button>
+          <button type="submit" class="submitButton">Confirm</button>
         </form>
+      </div>
+
+      <div class="complete">
+        <img src="images/icon-complete.svg" alt="completeIcon">
+        <h2>Thank You!</h2>
+        <span>We've added your card details</span>
+        <button class="continueButton">Continue</button>
       </div>
     </div>
   </main>
-  
-  
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Myckael Fernandes</a>.
   </div> 
+  
+  <script src="js/main.js"></script>
 </body>
 </html>
